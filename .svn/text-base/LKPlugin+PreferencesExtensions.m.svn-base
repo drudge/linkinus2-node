@@ -1,0 +1,41 @@
+/*
+ * This is a simple example showing how you can handle preferences in your plug-in and its potential preference panes.
+ * Feel free to remove it if you have no need for it, or change it if your needs are more complex.
+ */
+
+#import "LKPlugin+PreferencesExtensions.h"
+
+NSString *LKSamplePluginEnabledKey = @"LKSamplePluginEnabled";
+NSString *LKSamplePluginSelectedTagKey = @"LKSamplePluginSelectedTag";
+
+@implementation NSObject (LKPlugin_PreferencesExtensions)
+- (NSDictionary *)preferences
+{
+	if (![[NSFileManager defaultManager] fileExistsAtPath:[self preferencesPath]])
+	{
+		[self setPreferences:[NSDictionary dictionary]];
+	}
+	
+	return [NSDictionary dictionaryWithContentsOfFile:[self preferencesPath]];
+}
+
+- (void)setPreferences:(NSDictionary *)dictionary
+{
+	[dictionary writeToFile:[self preferencesPath] atomically:YES];
+}
+
+- (NSString *)preferencesPath
+{
+	return [[NSString stringWithFormat:@"~/Library/Preferences/%@.plist", [[NSBundle bundleForClass:[self class]] bundleIdentifier]] stringByExpandingTildeInPath];
+}
+
+- (BOOL)pluginEnabled
+{
+	return [[[self preferences] objectForKey:LKSamplePluginEnabledKey] boolValue];
+}
+
+- (int)pluginSelectedTag
+{
+	return [[[self preferences] objectForKey:LKSamplePluginSelectedTagKey] intValue];
+}
+@end

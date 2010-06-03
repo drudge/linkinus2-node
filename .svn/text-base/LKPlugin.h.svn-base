@@ -1,0 +1,17 @@
+
+#import <Cocoa/Cocoa.h>
+
+typedef enum {
+	LKSamplePluginNewsTag,
+	LKSamplePluginGreetTag,
+	LKSamplePluginBeautifulTag
+} LKSamplePluginTag;
+
+@protocol LKPluginProtocol, LKAgentProtocol;
+
+@interface LKPlugin : NSObject <LKPluginProtocol>
+{
+	id <LKAgentProtocol> _agent;
+}
+
+@end

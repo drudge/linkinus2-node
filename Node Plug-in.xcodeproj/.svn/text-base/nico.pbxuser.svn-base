@@ -1,0 +1,137 @@
+// !$*UTF8*$!
+{
+	03AF6BAA0BA2D8DB00D23F96 /* LKPlugin+PreferencesExtensions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {778, 407}}";
+			sepNavSelRange = "{294, 0}";
+			sepNavVisRect = "{{0, 0}, {778, 407}}";
+			sepNavWindowFrame = "{{153, 355}, {784, 692}}";
+		};
+	};
+	03AF6BAB0BA2D8DB00D23F96 /* LKPlugin+PreferencesExtensions.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {713, 602}}";
+			sepNavSelRange = "{1095, 0}";
+			sepNavVisRect = "{{0, 0}, {713, 271}}";
+		};
+	};
+	03F2486C0BC957B100CBA8CC /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	03F2486D0BC957B100CBA8CC /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	03F24A920BC957B100CBA8CC /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = "Linkinus Plug-in";
+		objects = (
+		);
+	};
+	03F24AB50BC957B100CBA8CC /* LKPluginProtocol.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {778, 1904}}";
+			sepNavSelRange = "{1884, 83}";
+			sepNavVisRect = "{{0, 755}, {778, 407}}";
+			sepNavWindowFrame = "{{17, 141}, {508, 479}}";
+		};
+	};
+	03F24ADB0BC957B100CBA8CC /* LKPlugin.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {778, 407}}";
+			sepNavSelRange = "{275, 0}";
+			sepNavVisRect = "{{0, 0}, {778, 407}}";
+			sepNavWindowFrame = "{{930, 280}, {592, 694}}";
+		};
+	};
+	03F24E250BC957B100CBA8CC /* LKPlugin.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {778, 1848}}";
+			sepNavSelRange = "{5051, 0}";
+			sepNavVisRect = "{{0, 1428}, {778, 407}}";
+			sepNavWindowFrame = "{{731, 52}, {658, 814}}";
+		};
+	};
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeTarget = 8D5B49AC048680CD000E48DA /* Sample */;
+		addToTargets = (
+			8D5B49AC048680CD000E48DA /* Sample */,
+		);
+		breakpointsGroup = 03F24A920BC957B100CBA8CC /* XCBreakpointsBucket */;
+		codeSenseManager = 03F2486D0BC957B100CBA8CC /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					184,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 198441146;
+			PBXWorkspaceStateSaveDate = 198441146;
+		};
+		sourceControlManager = 03F2486C0BC957B100CBA8CC /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	089C167EFE841241C02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {778, 589}}";
+			sepNavSelRange = "{82, 0}";
+			sepNavVisRect = "{{0, 0}, {778, 589}}";
+		};
+	};
+	8D5B49AC048680CD000E48DA /* Sample */ = {
+		activeExec = 0;
+	};
+	8D5B49B7048680CD000E48DA /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {778, 407}}";
+			sepNavSelRange = "{529, 0}";
+			sepNavVisRect = "{{0, 0}, {778, 407}}";
+		};
+	};
+}

@@ -1,0 +1,136 @@
+/*
+ *  LKPluginProtocol.h
+ *  Linkinus Plug-in
+ *
+ *  Created by Nico on 3/9/07.
+ *  Copyright 2007 Code 47. All rights reserved.
+ *
+ */
+
+
+/*** These keys are the keys used in the information dictionary ***
+ ***       passed as argument when an IRC event occurs.         ***/
+
+#define LKRawKey @"LKRaw"
+#define LKConnectionKey @"LKConnection"
+#define LKChannelsKey @"LKChannels"
+#define LKDescriptionKey @"LKDescription"
+#define LKNickKey @"LKNick"
+
+
+@protocol LKChannelProtocol, LKAgentProtocol, LKConnectionProtocol, LKPersonProtocol;
+
+@protocol LKPluginProtocol
+
+- (id <LKPluginProtocol>)initWithAgent:(id <LKAgentProtocol>)agent;
+
+// Catch incoming data
+- (void)incomingNick:(NSDictionary *)infoDict;
+- (void)incomingJoin:(NSDictionary *)infoDict;
+- (void)incomingKick:(NSDictionary *)infoDict;
+- (void)incomingNotice:(NSDictionary *)infoDict;
+- (void)incomingPart:(NSDictionary *)infoDict;
+- (void)incomingQuit:(NSDictionary *)infoDict;
+- (void)incomingMessage:(NSDictionary *)infoDict;
+- (void)incomingAction:(NSDictionary *)infoDict;
+- (void)incomingMode:(NSDictionary *)infoDict;
+
+// Catch outgoing data
+- (void)outgoingAway:(NSDictionary *)infoDict;
+- (void)outgoingMode:(NSDictionary *)infoDict;
+- (void)outgoingBan:(NSDictionary *)infoDict;
+- (void)outgoingJoin:(NSDictionary *)infoDict;
+- (void)outgoingKick:(NSDictionary *)infoDict;
+- (void)outgoingMessage:(NSDictionary *)infoDict;
+- (void)outgoingNotice:(NSDictionary *)infoDict;
+- (void)outgoingAction:(NSDictionary *)infoDict;
+- (void)outgoingNick:(NSDictionary *)infoDict;
+- (void)outgoingPart:(NSDictionary *)infoDict;
+- (void)outgoingQuit:(NSDictionary *)infoDict;
+
+// Handle new commands
++ (NSArray *)availableCommands;
+- (void)handleCommand:(NSString *)line onConnection:(id <LKConnectionProtocol>)connection;
+
+@end
+
+
+
+@protocol LKPluginInterfaceControllerProtocol
+
+- (NSImage *)icon;
+- (NSView *)view;
+
+@end
+
+
+
+@protocol LKAgentProtocol
+
+- (BOOL)isInterfaceAttached;
+
+- (NSArray *)connections;
+- (id <LKChannelProtocol>)currentChannel;
+
+@end
+
+
+
+@protocol LKChannelProtocol
+
+- (void)echo:(NSString *)string;
+
+- (NSString *)name;
+- (NSString *)password;
+
+- (NSArray *)users;
+- (id <LKPersonProtocol>)personWithName:(NSString *)nickname;
+
+- (BOOL)isChannel;
+- (BOOL)isConsole;
+- (BOOL)isQuery;
+
+- (id <LKConnectionProtocol>)connection;
+
+- (void)join;
+- (void)part;
+- (void)partWithMessage:(NSString *)message;
+- (void)cycle;
+
+@end
+
+
+
+@protocol LKConnectionProtocol
+
+- (NSString *)hostname;
+- (unsigned int)port;
+
+- (NSArray *)channels;
+- (id <LKChannelProtocol>)channelWithName:(NSString *)name;
+- (id <LKChannelProtocol>)queryWithName:(NSString *)name;
+
+- (void)processCommand:(NSString *)line;
+
+- (void)connect;
+- (void)quit;
+- (void)quitWithMessage:(NSString *)msg;
+
+@end
+
+
+
+@protocol LKPersonProtocol
+
+- (BOOL)isMe;
+
+- (NSString *)nickname;
+- (NSString *)username;
+- (NSString *)hostname;
+- (NSString *)realname;
+- (NSString *)mask;
+
+- (id <LKChannelProtocol>)channel;
+- (id <LKConnectionProtocol>)connection;
+
+@end
