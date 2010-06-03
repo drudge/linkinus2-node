@@ -1,10 +1,9 @@
-Node.js integration with Linkinus 2
+Node.js integration for Linkinus 2
 ================================================================
 
 The goal of this project is to provide an interface to create scripts and plugins for Linkinus using node.js. Look for announcements at the [Conceited Blog](http://conceited.net/blog).
 
-THIS PROJECT IN IN DEVELOPMENT AND DOESN'T DO ANYTHING YET. 
------------------------------------------------------------------------------------------------------------------
+### THIS PROJECT IN IN DEVELOPMENT AND DOESN'T DO ANYTHING YET. 
 
 Credits
 --------
